@@ -1,0 +1,96 @@
+.terms-block
+  .btn-open
+    display: none
+  .grid
+    min-height: 588px
+  .flex-item.term
+    display: none
+    a.btn
+      margin-top: 24px
+      display: none
+  .card.active
+    .flex-item.term
+      display: block
+    .flex-item.info
+      flex-direction: column
+      align-items: baseline
+      a.btn
+        display: flex
+      p
+        font-size: 18px
+        line-height: 24px
+      h3
+        margin-bottom: 20px
+      & > *:not(.btn)
+
+        width: auto
+    .flex
+      align-items: stretch
+      & > .flex-item
+        width: 50%
+  .flex-item.info
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    & > *:not(.btn)
+
+      width: 50%
+    p
+      font-size: 24px
+      line-height: 26px
+    a.btn
+      margin-top: auto
+      display: none
+  .card.popular
+    h3.flex
+      align-items: baseline
+    h3:after
+      content: "Popular"
+      font-size: 16px
+      line-height: 18px
+      padding: 6px 12px
+      color: $White
+      background-color: $Orange
+      border-radius: 15px
+      margin-left: 40px
+
+  .card.clickable
+    overflow: hidden
+
+@media screen and ( max-width: $middle )
+  .terms-block
+    .btn-open
+      display: flex
+    .img-terms
+      height: 312px
+    .grid
+      display: flex
+      flex-direction: column
+    .flex-item.term
+      a.btn
+        display: flex
+    .card.active
+      .flex-item.info
+        p
+          color: $White !important
+          margin-bottom: 20px
+    .card > .flex
+      flex-direction: column
+      & > *
+        width: 100% !important
+      .flex-item.info
+        flex-direction: row
+        flex-wrap: wrap
+        .btn-open
+          display: flex
+        h3
+          margin-bottom: 20px
+        p
+          flex-basis: 100%
+          color: $Grey-text
+          font-size: 18px
+          font-weight: 500
+          line-height: 24px
+        a.btn
+          display: none

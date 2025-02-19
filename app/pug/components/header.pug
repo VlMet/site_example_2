@@ -1,0 +1,59 @@
+.header
+  .wrap
+    .flex 
+      a(href="#welcome").item.logo
+        img(src="../img/logo-blue.svg", alt="")
+      .burger
+        button.burger-btn.clickable-solo
+          <svg width="23" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h23v2H0V0Z" fill="#414141"/></svg>
+          <svg width="23" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h23v2H0V0Z" fill="#414141"/></svg>
+          <svg width="23" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h23v2H0V0Z" fill="#414141"/></svg>
+      .item.flex.menu
+        nav 
+          ul
+            li
+              a(href="#terms")  Anchor
+            li
+              a(href="#platform")  Anchor
+            li
+              a(href="#forecast")  Anchor
+            li
+              a(href="#about")  Anchor
+            li
+              a(href="#contacts")  Anchor
+      .item.flex.menu
+        .lang
+          button.lang-btn.flex.clickable-solo.click-timer.independent
+            span En
+          ul.lang-select
+            li 
+              a(href="#") English 
+            li 
+              a(href="#") Русский
+        .signin 
+          a(href="#").btn.mini Button
+.closed-window
+.mobile-menu
+  nav 
+    ul
+      li
+        a(href="#terms")  Anchor
+      li
+        a(href="#platform")  Anchor
+      li
+        a(href="#forecast")  Anchor
+      li
+        a(href="#about")  Anchor
+      li
+        a(href="#contacts")  Anchor
+      li.lang-tr.clickable-solo
+        button.flex Lang
+      ul.lang
+        li 
+          a(href="#") English
+        li 
+          a(href="#") Русский 
+    .signin 
+          a(href="#").btn.full-width Button
+
+

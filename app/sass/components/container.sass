@@ -1,0 +1,49 @@
+.container
+  padding-top: 120px
+  &.first
+    padding-top: 80px
+  &.last
+    padding-bottom: 120px
+  h2
+    margin-bottom: 48px
+    &:has(+ p) 
+      margin-bottom: 18px
+    & + p
+      margin-bottom: 48px
+  h1
+    margin-bottom: 40px
+
+@media screen and ( max-width: $tablet )
+  .container
+    padding-top: 100px
+    &.first
+      padding-top: 70px
+    &.last
+      padding-bottom: 80px
+    h2
+      margin-bottom: 38px
+      &:has(+ p) 
+        margin-bottom: 16px
+      & + p
+        margin-bottom: 38px
+    h1
+      margin-bottom: 42px
+
+@media screen and ( max-width: $mobile )
+  .container
+    padding-top: 80px
+    &.first
+      padding-top: 60px
+    &.last
+      padding-bottom: 64px
+    h2
+      margin-bottom: 30px
+      &:has(+ p) 
+        margin-bottom: 16px
+      & + p
+        margin-bottom: 30px
+    h1
+      margin-bottom: 40px
+
+  
+  

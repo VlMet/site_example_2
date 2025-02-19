@@ -1,0 +1,107 @@
+.card
+  border-radius: 5px
+  box-shadow: 6px 8px 22px 0px rgba(0, 0, 0, 0.05),25px 31px 40px 0px rgba(0, 0, 0, 0.04),56px 70px 54px 0px rgba(0, 0, 0, 0.03),99px 124px 64px 0px rgba(0, 0, 0, 0.01),154px 194px 69px 0px rgba(0, 0, 0, 0)
+  transition: background-color 0.3s
+
+  background-color: $White
+  &.bg-orange 
+    background-color: $Orange
+    color: $White
+    .img-border
+      background-color: $Orange-light
+    .btn 
+      background-color: $White
+      color: $Black-text
+    .icon
+       background-color: $White
+
+  &.bg-blue, &.active
+    background-color: $Blue
+    color: $White
+    .btn 
+      background-color: $White
+      color: $Black-text
+    .btn-open
+      svg
+        transition: transform 0.3s
+        transform: rotate(180deg)
+      svg path
+        fill: $Blue
+  &.bg-blue-light
+    background-color: $Blue-extra-light
+
+  padding: 40px 20px 
+  &.pg-0
+    padding: 0
+  &.pg-20
+    padding: 20px
+  &.pg-48-24
+    padding: 48px 24px
+  &.pg-40-24
+    padding: 40px 24px
+  
+  &.with-logo
+    position: relative
+    overflow: hidden
+    &::after
+      content: ""
+      position: absolute
+      width: 250px
+      height: 50px
+      bottom: 20px
+      left: 20px
+      background-image: url(../img/logo-white.svg)
+      background-position: left bottom
+      background-repeat: no-repeat
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 50%)
+  &.img-steps
+    //max-height: 530px
+    background-image: url(../img/img-steps.jpg)
+    background-size: cover
+  &.img-whyus
+    background-image: url(../img/img-why-us.png)
+    background-position: 55px 75px
+    background-repeat: no-repeat
+    background-size: cover
+  &.img-about
+    background-image: url(../img/img-about.jpg)
+    //max-height: 447px
+    background-size: cover
+  &.img-terms
+    background-image: url(../img/img-terms.jpg)
+    background-size: cover
+    height: 588px
+  .card-icon
+    display: block
+    margin-bottom: 24px
+  .img-border
+    background-color: $Blue-extra-light
+    border-radius: 5px
+    overflow: hidden
+
+.is-list
+  .card:not(.bg-blue):not(.active):hover
+    background-color: $Blue-extra-light
+  .card.clickable:not(.bg-blue):not(.active):hover
+    cursor: pointer
+button.card:not(.active):hover
+  background-color: $Blue-extra-light
+  cursor: pointer
+a.card:not(.active):hover
+  background-color: $Blue-extra-light
+  cursor: pointer
+
+@media screen and ( max-width: $mobile )
+  .card
+    padding: 20px 10px
+    &.pg-20
+      padding: 10px
+    &.pg-48-24
+      padding: 24px 12px
+    &.pg-40-24
+      padding: 20px 12px

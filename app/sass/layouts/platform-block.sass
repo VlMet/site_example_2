@@ -1,0 +1,51 @@
+.platform-block
+  .card
+    padding-bottom: 20px
+    h3
+      margin-bottom: 16px
+  .img-border
+    width: 100%
+    height: 240px
+    background-size: contain
+    background-repeat: no-repeat
+    max-width: 378px
+    margin: 0 auto
+    &.img-web
+      background-image: url('../img/img-web.png')
+      background-position: right
+    &.img-desktop
+      background-image: url('../img/img-desktop.png')
+      background-position: bottom
+    &.img-mobile
+      background-image: url('../img/img-mobile.png')
+      background-position: bottom
+  .btns-control
+    &.grid
+      gap: 6px
+      grid-template-columns: 1fr 1fr
+    margin: 26px 0
+
+@media screen and ( max-width: $tablet )
+  .platform-block
+    .wrap > .grid
+      display: flex
+      flex-direction: column
+@media screen and ( max-width: $tablet ) and (min-width: $mobile)
+    .platform-block
+      .card
+        display: flex
+        gap: 20px
+        .btns-control
+          margin-bottom: 0
+        .img-border
+          height: auto
+@media screen and ( max-width: $mobile )
+  .platform-block
+    .card
+      .btns-control
+        margin: 20px 0
+        display: flex
+        flex-direction: column
+      .img-border
+        max-width: none
+

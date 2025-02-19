@@ -1,0 +1,33 @@
+doctype html 
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Example site
+    link(rel="stylesheet", href="css/style.css")
+    //- link(rel="stylesheet", href="libs/owlCarousel/owl.carousel.min.css")
+    link(rel="stylesheet", href="libs/slick/slick.min.css")
+
+body
+  .grid-bg
+    .wrap
+      .grid
+        .item 
+        .item 
+        .item
+  header
+    include components/header.pug
+
+    //- article.mobile-menu 
+    //-   include components/mobile-menu.pug
+
+  main 
+    include components/main.pug
+
+  footer.footer 
+    include components/footer.pug
+
+script(src="libs/jquery-3.6.1.min.js") 
+//- script(src="libs/owlCarousel/owl.carousel.min.js")
+script(src="libs/slick/slick.min.js") 
+script(src="js/script.js") 

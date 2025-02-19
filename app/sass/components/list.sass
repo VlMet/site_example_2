@@ -1,0 +1,15 @@
+.list
+  display: flex
+  flex-direction: column
+  gap: 0.5em
+  & li
+    display: flex
+    align-items: baseline
+    &:before
+      content: ""
+      display: inline-block
+      width: 10px
+      height: 10px
+      margin-right: 16px
+      background-color: $White
+      flex-shrink: 0

@@ -1,0 +1,103 @@
+.menu, .docs
+    ul
+      display: flex
+      flex-direction: column
+      //gap: 10px
+      li
+        width: fit-content
+        a
+          padding: 6px 12px
+          display: block
+          width: 100%
+          height: 100%
+          border-radius: 30px
+          transition: background-color 0.2s
+          &:hover
+            background-color: #99BDFB
+          // &:hover ~ &.active
+          //   background-color: rgba(153, 189, 251, 0.7)
+.header
+  .menu ul > li > a.active
+    background-color: #99BDFB
+
+
+.mobile-menu
+  padding-top: 1px
+  display: none
+  position: fixed
+  z-index: 3
+  top: 83px
+  right: -100%
+  transition: right 0.5s
+  height: 100vh
+  max-width: 350px
+  width: 100%
+  background: $White
+  box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.149)
+  nav > ul
+    display: flex
+    flex-direction: column
+    & > li
+      width: 100%
+      display: block
+    & > ul.lang > li > a
+      padding-left: 40px
+    & > li > *, & > ul > li > a
+      display: block
+      padding: 16px 20px
+      background-color: $White
+      width: 100%
+      transition: background-color 0.2s
+      &:hover
+        background-color: #99BDFB
+        cursor: pointer
+      &.active
+        background-color: #99BDFB
+  .lang-tr > button
+    display: flex
+    justify-content: space-between
+    &::after
+      content: ""
+      width: 11px
+      height: 6px
+      display: block
+      background-image: url('data:image/svg+xml,<svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2803 5.78033C9.98744 6.07322 9.51256 6.07322 9.21967 5.78033L5.25 1.81066L1.28033 5.78033C0.987437 6.07322 0.512563 6.07322 0.21967 5.78033C-0.0732231 5.48744 -0.0732231 5.01256 0.21967 4.71967L4.71967 0.21967C5.01256 -0.0732231 5.48744 -0.0732231 5.78033 0.21967L10.2803 4.71967C10.5732 5.01256 10.5732 5.48744 10.2803 5.78033Z" fill="%23191919"/></svg>')
+      transform: rotate(180deg)
+      transition: transform 0.2s
+  .lang-tr.active
+    button::after
+      transform: rotate(0)
+  .lang-tr.active ~ .lang
+    max-height: 200px
+  .lang
+    transition: max-height 0.5s
+    max-height: 0
+    overflow: hidden
+  .signin
+    padding: 28px 20px 0
+
+
+.closed-window
+  position: fixed
+  opacity: 0
+  top: 0
+  left: 100%
+  width: 100%
+  height: 100%
+  background: black
+  
+  z-index: 2
+  transition: opacity 0.3s
+html.menu-opened
+  overflow: hidden
+  body
+    overflow: hidden
+    .closed-window
+      opacity: 0.1
+      left: 0
+    .mobile-menu
+      right: 0
+
+@media screen and ( max-width: $mobile )
+  .mobile-menu
+    max-width: none
